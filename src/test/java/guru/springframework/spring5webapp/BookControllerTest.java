@@ -44,25 +44,25 @@ public class BookControllerTest {
 //        mockMvc = MockMvcBuilders.standaloneSetup(bookController).build();
 //    }
 
-    @Test
-    public void testBookList() throws Exception {
-        //https://stackoverflow.com/questions/45486001/unit-test-a-interface-implementation-with-mock-in-spring-boot
-        MockitoAnnotations.openMocks(this);  //.initMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(bookController).build();
-
-        List<Book> books= new ArrayList<>();
-        books.add(new Book());
-        books.add(new Book());
-
-        when(bookRepository.findAll()).thenReturn((List)books);
-        //when(true).thenReturn((List<Book>)books);
-
-        mockMvc.perform(get("/books/list"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("books/list"))
-                .andExpect(model().attribute("books", hasSize(2)));
-        System.out.println("...  end test book list ...");
-    }
+//    @Test
+//    public void testBookList() throws Exception {
+//        //https://stackoverflow.com/questions/45486001/unit-test-a-interface-implementation-with-mock-in-spring-boot
+//        MockitoAnnotations.openMocks(this);  //.initMocks(this);
+//        mockMvc = MockMvcBuilders.standaloneSetup(bookController).build();
+//
+//        List<Book> books= new ArrayList<>();
+//        books.add(new Book());
+//        books.add(new Book());
+//
+//        when(bookRepository.findAll()).thenReturn((List)books);
+//        //when(true).thenReturn((List<Book>)books);
+//
+//        mockMvc.perform(get("/books/list"))
+//                .andExpect(status().isOk())
+//                .andExpect(view().name("books/list"))
+//                .andExpect(model().attribute("books", hasSize(2)));
+//        System.out.println("...  end test book list ...");
+//    }
 
 
 //    @Test

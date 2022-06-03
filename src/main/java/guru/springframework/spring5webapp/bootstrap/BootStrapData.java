@@ -25,7 +25,7 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        System.out.println("... Boot strap data ...");
+        System.out.println("... START Boot strap data ...");
 
         Author eric = new Author("Eric", "Evans");
         Book bbb= new Book("Domain Driven Design","123123");
@@ -38,7 +38,6 @@ public class BootStrapData implements CommandLineRunner {
 
         eric.getBooks().add(bbb);
         bbb.getAuthors().add(eric);
-        //bbb.setPublisher(publisher);
 
         authorRepository.save(eric);
         bookRepository.save(bbb);
@@ -64,6 +63,7 @@ public class BootStrapData implements CommandLineRunner {
 
         System.out.println("Publisher Num books published:" + publisher.getBooks().size());
         System.out.println("Number of Publishers:" + publisherRepository.count());
+        System.out.println("... END Boot strap data ...");
     }
 
 }

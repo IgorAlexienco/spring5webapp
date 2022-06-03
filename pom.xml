@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>guru.springframework</groupId>
-	<artifactId>spring5webapp</artifactId>
+	<artifactId>sb-app</artifactId>
 	<version>1</version>
-	<name>spring5webapp</name>
-	<description>Demo project for Spring Boot auto import</description>
+	<name>sb-app</name>
+	<description>Project to revise spring boot docker and kubernetes</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
